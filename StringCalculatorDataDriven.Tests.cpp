@@ -22,7 +22,7 @@ void SetUp(){
 void TearDown(){
 };
 TEST_F(StringCalculatorDataDrivenTestSuite,DataDrivenTestCase){
-  for(TestDataPair* DataPairPtr :dataList){
+  for(TestDataPair* dataPairPtr :dataList){
    int actualValue=Add(dataPairPtr->input);
         ASSERT_EQ(actualValue,dataPairPtr->expectedValue);
     }
