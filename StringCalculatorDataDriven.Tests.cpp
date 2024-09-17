@@ -1,5 +1,6 @@
 #include "StringCalculator.h"
 #include <gtest/gtest.h>
+#include <vector>
 class TestDataPair{
 public:
   string input;
@@ -12,17 +13,17 @@ protected:
   vector<TestDataPair*> datalist;
 //before each testcase
 void SetUp(){
-  dataList.pushback(new TestDataPair {"",0});
-  dataList.pushback(new TestDataPair {"0",0});
-  dataList.pushback(new TestDataPair {"1",1});
-  dataList.pushback(new TestDataPair {"1,2",3});
-  dataList.pushback(new TestDataPair {"1,2,3",6});
+  datalist.pushback(new TestDataPair {"",0});
+  datalist.pushback(new TestDataPair {"0",0});
+  datalist.pushback(new TestDataPair {"1",1});
+  datalist.pushback(new TestDataPair {"1,2",3});
+  datalist.pushback(new TestDataPair {"1,2,3",6});
 }
 // after each test case
 void TearDown(){
 };
 TEST_F(StringCalculatorDataDrivenFixture,DataDrivenTestCase){
-  for(TestDataPair* dataPairPtr :dataList){
+  for(TestDataPair* dataPairPtr :datalist){
    int actualValue=Add(dataPairPtr->input);
         ASSERT_EQ(actualValue,dataPairPtr->expectedValue);
     }
@@ -30,7 +31,7 @@ TEST_F(StringCalculatorDataDrivenFixture,DataDrivenTestCase){
 
 
 TEST(StringCalculatorDataDrivenTestSuite,DataDrivenTestCase){
-  // vector<TestDataPair>dataList;
+  // vector<TestDataPair>datalist;
   TestDataPair pair_one {"",0};
   TestDataPair pair_two {"0",0};
   TestDataPair pair_three {1,1};
@@ -43,7 +44,7 @@ TEST(StringCalculatorDataDrivenTestSuite,DataDrivenTestCase){
   dataList.push_back(pair_four);
   dataList.push_back(pair_five);
   // Iterate using a range-based for loop
-    for(TestDataPair DataPair : dataList){
+    for(TestDataPair DataPair : datalist){
     int actualValue=Add(DataPair.input);
   ASSERT_EQ(actualValue,DataPair.expectedValue);
 }
