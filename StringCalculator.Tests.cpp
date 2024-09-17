@@ -34,5 +34,12 @@ TEST(StringCalculatorTestSuite,add_Multiple_comma_numbers_SumIsExpected){
   int actualValue=Add(input);
   ASSERT_EQ(actualValue,expectedValue);
 }
+TEST(StringCalculatorTestSuite,add_negativenumber_SumIsExpected){
+  string input="1,-3,4";
+  int expectedValue=2;
+  int actualValue=Add(input);
+  ASSERT_EQ(actualValue,expectedValue);
+}
+
 
 
