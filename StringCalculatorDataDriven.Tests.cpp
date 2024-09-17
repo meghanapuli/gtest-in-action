@@ -4,7 +4,7 @@ class TestDataPair{
 public:
   string input;
   int expectedValue;
-  TestDataPair(string_input,int_expectedValue) : input{_input}, expectedValue{_expectedValue}{
+  TestDataPair(string_ input,int_expectedValue) : input{_input}, expectedValue{_expectedValue}{
   }
 };
 
@@ -22,7 +22,7 @@ TEST(StringCalculatorDataDrivenTestSuite,DataDrivenTestCase){
   dataList.push_back(pair_five);
   // Iterate using a range-based for loop
     for(TestDataPair DataPair : dataList){
-    int actualValue=Add(Datapair.input);
-  ASSERT_EQ(actualValue,Datapair.expectedValue);
+    int actualValue=Add(DataPair.input);
+  ASSERT_EQ(actualValue,DataPair.expectedValue);
 }
 }
