@@ -21,7 +21,7 @@ void SetUp(){
 // after each test case
 void TearDown(){
 };
-TEST_F(StringCalculatorDataDrivenTestSuite,DataDrivenTestCase){
+TEST_F(StringCalculatorDataDrivenFixture,DataDrivenTestCase){
   for(TestDataPair* dataPairPtr :dataList){
    int actualValue=Add(dataPairPtr->input);
         ASSERT_EQ(actualValue,dataPairPtr->expectedValue);
