@@ -47,11 +47,11 @@ TEST(StringCalculatorTestSuite,add_delimiter_sumisExpected){
   ASSERT_EQ(actualValue,expectedValue);
 }
 
-TEST(StringCalculatorTestSuite,add_negative_number_throwsException){
+TEST(StringCalculatorTestSuite,add_negative_number_throwsException_Invalid_argument){
   string input="1,-1,11";
   int expectedValue=0;
   int actualValue=Add(input);
-  ASSERT_THROW(actualValue,Negatives not allowed:-1);
+  ASSERT_THROW(actualValue,Invalid_argument);
 }
 
 
