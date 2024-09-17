@@ -12,9 +12,9 @@ protected:
   vector<TestDataPair> datalist;
 //before each testcase
 void SetUp(){
-  dataList.pushback(new TestDataPair {",0});
+  dataList.pushback(new TestDataPair {"",0});
   dataList.pushback(new TestDataPair {"0",0});
-  dataList.pushback(new TestDataPair {1,1});
+  dataList.pushback(new TestDataPair {"1",1});
   dataList.pushback(new TestDataPair {"1,2",3});
   dataList.pushback(new TestDataPair {"1,2,3",6});
 }
