@@ -13,11 +13,11 @@ protected:
   vector<TestDataPair*> datalist;
 //before each testcase
 void SetUp(){
-  datalist.pushback(new TestDataPair {"",0});
-  datalist.pushback(new TestDataPair {"0",0});
-  datalist.pushback(new TestDataPair {"1",1});
-  datalist.pushback(new TestDataPair {"1,2",3});
-  datalist.pushback(new TestDataPair {"1,2,3",6});
+  datalist.push_back(new TestDataPair {"",0});
+  datalist.push_back(new TestDataPair {"0",0});
+  datalist.push_back(new TestDataPair {"1",1});
+  datalist.push_back(new TestDataPair {"1,2",3});
+  datalist.push_back(new TestDataPair {"1,2,3",6});
 }
 // after each test case
 void TearDown(){
