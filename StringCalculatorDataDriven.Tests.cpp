@@ -22,7 +22,7 @@ TEST(StringCalculatorDataDrivenTestSuite,DataDrivenTestCase){
   dataList.push_back(pair_five);
   // Iterate using a range-based for loop
     for(TestDataPair DataPair : dataList){
-    int actualValue=Add(datapair.input);
-  ASSERT_EQ(actualValue,datapair.expectedValue);
+    int actualValue=Add(Datapair.input);
+  ASSERT_EQ(actualValue,Datapair.expectedValue);
 }
 }
