@@ -22,4 +22,17 @@ TEST(StringCalculatorTestSuite,add_ZeroInputString_ZeroIsExpected){
   int actualValue=Add(input);
   ASSERT_EQ(actualValue,expectedValue);
 }
+TEST(StringCalculatorTestSuite,add_twocomma_numbers_SumIsExpected){
+  string input="1,2";
+  int expectedValue=3;
+  int actualValue=Add(input);
+  ASSERT_EQ(actualValue,expectedValue);
+}
+TEST(StringCalculatorTestSuite,add_Multiple_comma_numbers_SumIsExpected){
+  string input="1,2,3,4";
+  int expectedValue=10;
+  int actualValue=Add(input);
+  ASSERT_EQ(actualValue,expectedValue);
+}
+
 
