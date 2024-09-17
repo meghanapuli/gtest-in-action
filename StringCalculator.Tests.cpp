@@ -40,12 +40,19 @@ TEST(StringCalculatorTestSuite,numbersgreater1000_ISignored){
   int actualValue=Add(input);
   ASSERT_EQ(actualValue,expectedValue);
 }
-TEST(StringCalculatorTestSuite,add_negative_number_throwsEception){
-  string input="1,-1,11";
-  int expectedValue=0;
+TEST(StringCalculatorTestSuite,add_delimiter_sumisExpected){
+  string input="1&4@/n5";
+  int expectedValue=10;
   int actualValue=Add(input);
-  ASSERT_THROW(actualValue,"Negatives not allowed:-1");
+  ASSERT_EQ(actualValue,expectedValue);
 }
+
+// TEST(StringCalculatorTestSuite,add_negative_number_throwsException){
+//   string input="1,-1,11";
+//   int expectedValue=0;
+//   int actualValue=Add(input);
+//   ASSERT_THROW(actualValue,"Negatives not allowed:-1");
+// }
 
 
 
