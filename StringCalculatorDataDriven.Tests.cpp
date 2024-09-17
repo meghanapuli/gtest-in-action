@@ -9,7 +9,7 @@ public:
 };
 class StringCalculatorDataDrivenFixture:public testing::Test{
 protected:
-  vector<TestDataPair> datalist;
+  vector<TestDataPair*> datalist;
 //before each testcase
 void SetUp(){
   dataList.pushback(new TestDataPair {"",0});
