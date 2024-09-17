@@ -34,9 +34,9 @@ TEST(StringCalculatorTestSuite,add_Multiple_comma_numbers_SumIsExpected){
   int actualValue=Add(input);
   ASSERT_EQ(actualValue,expectedValue);
 }
-TEST(StringCalculatorTestSuite,add_negativenumber_SumIsExpected){
-  string input="1,-3,4";
-  int expectedValue=2;
+TEST(StringCalculatorTestSuite,numbersgreater1000_ISignored){
+  string input="1,1000,1001";
+  int expectedValue=1001;
   int actualValue=Add(input);
   ASSERT_EQ(actualValue,expectedValue);
 }
