@@ -21,7 +21,9 @@ void SetUp(){
 }
 // after each test case
 void TearDown(){
+  
 };
+
 TEST_F(StringCalculatorDataDrivenFixture,DataDrivenTestCase){
   for(TestDataPair* dataPairPtr :datalist){
    int actualValue=Add(dataPairPtr->input);
@@ -45,7 +47,8 @@ TEST(StringCalculatorDataDrivenTestSuite,DataDrivenTestCase){
   dataList.push_back(pair_five);
   // Iterate using a range-based for loop
     for(TestDataPair DataPair : datalist){
-    int actualValue=Add(DataPair.input);
-  ASSERT_EQ(actualValue,DataPair.expectedValue);
-}
+        int actualValue=Add(DataPair.input);
+        ASSERT_EQ(actualValue,DataPair.expectedValue);
+    }
+  
 }
