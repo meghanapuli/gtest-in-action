@@ -42,7 +42,7 @@ TEST(StringCalculatorTestSuite,numbersgreater1000_ISignored){
 }
 TEST(StringCalculatorTestSuite,add_negative_number_throwsEception){
   string input="1,-1,11";
-  int expectedValue=-1;
+  int expectedValue=0;
   int actualValue=Add(input);
   ASSERT_THROW(actualValue,"Negatives not allowed:-1");
 }
