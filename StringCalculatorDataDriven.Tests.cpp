@@ -25,7 +25,7 @@ void TearDown(){
 };
 
 TEST_F(StringCalculatorDataDrivenFixture,DataDrivenTestCase){
-  for(TestDataPair* dataPairPtr :datalist){
+  for(TestDataPair* dataPairPtr : datalist){
    int actualValue=Add(dataPairPtr->input);
         ASSERT_EQ(actualValue,dataPairPtr->expectedValue);
     }
