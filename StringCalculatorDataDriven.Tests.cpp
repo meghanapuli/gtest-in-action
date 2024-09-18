@@ -3,14 +3,16 @@
 #include <vector>
 class TestDataPair{
 public:
-  string input;
-  int expectedValue;
-  TestDataPair(string _input,int _expectedValue) : input{_input}, expectedValue{_expectedValue}{
-  }
+    string input;
+    int expectedValue;
+    TestDataPair(string _input,int _expectedValue) : input{_input}, expectedValue{_expectedValue}{
+    }
 };
 class StringCalculatorDataDrivenFixture:public testing::Test{
+
 protected:
   vector<TestDataPair*> datalist;
+
 //before each testcase
 void SetUp(){
   datalist.push_back(new TestDataPair {"",0});
