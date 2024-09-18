@@ -13,7 +13,7 @@ protected:
 class StringCalculatorParameterFixture:public StringCalculatorFixture, public testing::WithParamInterface<tuple<string,int>>{
 
 protected:
-    void Setup() override {
+    void SetUp() override {
         input= std::get<0>(GetParam());
         expectedValue= std::get<1>(GetParam());
  }
