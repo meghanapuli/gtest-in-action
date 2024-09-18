@@ -12,11 +12,11 @@ void ResetIntercationValues(){
     DisplayFunctionCallCount=0;
     DisplayFunctionArg=0;
 }
-TEST(InteractionTestSuite,InteractionTest){
+TEST(InteractionTestSuite,InteractionTests){
 
-  string input="";
+  string input="1,2";
   Add(input,&MockDisplayFunction);
   EXPECT_EQ(DisplayFunctionCallCount,1);
-  EXPECT_EQ(DisplayFunctionArg,1);
+  EXPECT_EQ(DisplayFunctionArg,3);
   ResetIntercationValues();
 }
