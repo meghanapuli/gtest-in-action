@@ -8,7 +8,7 @@ protected:
     string input;
     int expectedValue;
     int actualValue;
-    void SetTestParameters(const std::tuple<std::string, int>& params) {
+    void Setup() override {
         input= std::get<0>(GetParam());
         expectedValue= std::get<1>(GetParam());
  }
@@ -35,7 +35,6 @@ INSTANTIATE_TEST_SUITE_P(ValidStringCalculatorInputs,StringCalculatorParameterFi
 TEST_P(StringCalculatorParameterFixture,ParameterizedTest){
       // input= std::get<0>(GetParam());
       // expectedValue= std::get<1>(GetParam());
-      SetTestParameters(GetParam());
       actualValue=Add(input);
       ASSERT_EQ(actualValue,expectedValue);
 }
