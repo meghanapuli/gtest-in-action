@@ -35,7 +35,7 @@ TEST_F(StringCalculatorDataDrivenFixture,DataDrivenTestCase){
 
 
 TEST(StringCalculatorDataDrivenTestSuite,DataDrivenTestCase){
-  vector<TestDataPair*> datalist;
+  // vector<TestDataPair*> datalist;
   TestDataPair pair_one {"",0};
   TestDataPair pair_two {"0",0};
   TestDataPair pair_three {"1",1};
