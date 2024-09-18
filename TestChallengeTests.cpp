@@ -1,5 +1,6 @@
 #include <gtest/gtest.h>
 #include "TestChallenge.h"
+#include<gmock/gmock.h>
 
 //Stub - Fake Dependency
 class NetworkAlerterStub:public INetworkAlerter{
@@ -8,6 +9,12 @@ public:
           return 500;
       }
 
+};
+
+// mock implemantion
+class NetworkAlertMock::public INetworkAlerter{
+public:
+            MOCK_METHOD(int ,alert,(float celcius));
 };
 TEST(NetworkAlerterTestSuite,StateBasedTest){
   NetworkAlerterStub stub;
