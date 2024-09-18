@@ -9,7 +9,9 @@ protected:
     int expectedValue;
     int actualValue;
 };
+
 class StringCalculatorParameterFixture:public StringCalculatorFixture, public testing::WithParamInterface<tuple<string,int>>{
+
 protected:
     void Setup() override {
         input= std::get<0>(GetParam());
@@ -26,7 +28,7 @@ INSTANTIATE_TEST_SUITE_P(ValidStringCalculatorInputs,StringCalculatorParameterFi
   make_tuple("1,2,3", 6),
   make_tuple("1,\n,3",4),
   make_tuple("1,*,3",4),
-  make_tuple("1,\n,3",3),
+  make_tuple("1,\n,3",4),
   make_tuple("1,1230,3",4),
   make_tuple("3,/,3",6)
     
