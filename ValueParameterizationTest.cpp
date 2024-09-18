@@ -8,12 +8,13 @@ protected:
     string input;
     int expectedValue;
     int actualValue;
+};
+class StringCalculatorParameterFixture:public StringCalculatorFixture, public testing::WithParamInterface<tuple<string,int>>{
+protected:
     void Setup() override {
         input= std::get<0>(GetParam());
         expectedValue= std::get<1>(GetParam());
  }
-};
-class StringCalculatorParameterFixture:public StringCalculatorFixture, public testing::WithParamInterface<tuple<string,int>>{
 
 };
 //Parameter Values
