@@ -21,7 +21,7 @@ void SetUp(){
 }
 // after each test case
 void TearDown(){
-  
+    }
 };
 
 TEST_F(StringCalculatorDataDrivenFixture,DataDrivenTestCase){
