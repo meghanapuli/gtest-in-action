@@ -4,5 +4,6 @@
 #include <regex>
 #include <iostream>
 using namespace std;
-void Add(const string &input);
+// void Add(const string &input);
+void Add(const string &input,void(*displayptr)(int));
 
